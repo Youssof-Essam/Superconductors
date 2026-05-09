@@ -49,5 +49,10 @@ An end-to-end machine learning system designed to predict the critical temperatu
 Launch the MLflow tracking server and the storage volumes:
 ```bash
 docker compose up -d
-
+```
 ### 2. access port:5000 for the ui, 5001 for the api, and 5002 for ML-Flow
+
+# Directories
+## /api : backend api server using Fast_api for model serving and predictions
+## /ml_research : full training -> test -> log pipeline + notebooks for in depth analysis
+## /frontend : Streamlit web UI for user friendly access to the model
