@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import root_mean_squared_error, r2_score
-from sklearn.model_selection import KFold, cross_validate # Using cross_validate for multiple metrics
+from sklearn.model_selection import KFold, cross_validate 
 from src import PipleLineStepBase
 import logging
 
@@ -76,7 +76,7 @@ class SuperconductivityTrainingStep(PipleLineStepBase):
                 mlflow.log_metric("cv_rmse", avg_rmse)
                 mlflow.log_metric("cv_r2", avg_r2)
                 
-                return avg_rmse # Optuna minimizes RMSE
+                return avg_rmse # minimizes RMSE
                 
             except Exception as e:
                 logger.error(f"Trial {trial.number} failed: {e}")
